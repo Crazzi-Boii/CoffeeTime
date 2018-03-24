@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@                        @@
 @@ Author - Crazzi_Boii   @@
@@ -17,9 +16,8 @@ Follow me on github - "github.com/Crazzi-Boii"
     <LinearLayout
         android:id="@+id/linerTop"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:orientation="horizontal"
-        >
+        android:layout_height="50dp"
+        android:orientation="horizontal">
 
         <ImageButton
             android:layout_width="0dp"
@@ -29,8 +27,7 @@ Follow me on github - "github.com/Crazzi-Boii"
             android:onClick="decr"
             android:scaleType="centerCrop"
             android:src="@drawable/left"
-            tools:ignore="ContentDescription,Left Button"
-            />
+            tools:ignore="ContentDescription,Left Button" />
 
         <TextView
             android:id="@+id/CoffeeTypeTextView"
@@ -70,25 +67,27 @@ Follow me on github - "github.com/Crazzi-Boii"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.70">
+
             <ImageView
+                android:id="@+id/coffeePicture"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/coffeePicture"
-                android:src="@drawable/icon"
-                android:scaleType="fitXY"/>
+                android:scaleType="fitXY"
+                android:src="@drawable/icon" />
+
             <TextView
                 android:id="@+id/coffeePriceTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:layout_alignParentBottom="true"
                 android:layout_alignEnd="@id/coffeePicture"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="15dp"
+                android:background="@drawable/roundedcorner"
+                android:fontFamily="sans-serif"
                 android:padding="10dp"
                 android:text="Rs. 300"
                 android:textSize="20sp"
-                android:fontFamily="sans-serif"
                 android:textStyle="bold"
-                android:background="@drawable/roundedcorner"
                 android:visibility="invisible" />
         </RelativeLayout>
 
@@ -97,18 +96,172 @@ Follow me on github - "github.com/Crazzi-Boii"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="vertical">
-            <TextView
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
-            <TextView
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="0.25"
+                    android:background="@drawable/roundedcorner"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/remove"
+                    android:onClick="qdecr"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:fontFamily="cursive"
+                        android:padding="5dp"
+                        android:text="Quantity"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/showQuantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.75"
+                        android:fontFamily="cursive"
+                        android:text="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="0.25"
+                    android:background="@drawable/roundedcorner"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/add"
+                    android:onClick="qincr"/>
+
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
-            <TextView
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/xtraChinaTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonround"
+                    android:fontFamily="cursive"
+                    android:text=" extra \n cinnamon"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:onClick="xtraChina"
+                    />
+
+                <TextView
+                    android:id="@+id/xtraChoco"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonround"
+                    android:fontFamily="cursive"
+                    android:text="chocolate\n syrup"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:onClick="XtraChoco"/>
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/small"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonround"
+                    android:fontFamily="cursive"
+                    android:scaleType="centerCrop"
+                    android:text="S"
+                    android:textSize="50sp"
+                    android:textStyle="bold"
+                    android:onClick="sizeS"/>
+
+                <Button
+                    android:id="@+id/medium"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonround"
+                    android:fontFamily="cursive"
+                    android:scaleType="centerCrop"
+                    android:text="M"
+                    android:textSize="50sp"
+                    android:textStyle="bold"
+                    android:onClick="sizeM"/>
+
+                <Button
+                    android:id="@+id/large"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonround"
+                    android:fontFamily="cursive"
+                    android:scaleType="centerCrop"
+                    android:text="L"
+                    android:textSize="50sp"
+                    android:textStyle="bold"
+                    android:onClick="sizeL"/>
+
+                <Button
+                    android:id="@+id/Xlarge"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonround"
+                    android:fontFamily="cursive"
+                    android:scaleType="centerCrop"
+                    android:text="XL"
+                    android:textSize="50sp"
+                    android:textStyle="bold"
+                    android:onClick="sizeXL"/>
+
+            </LinearLayout>
+
+
         </LinearLayout>
     </LinearLayout>
 
@@ -124,7 +277,7 @@ Follow me on github - "github.com/Crazzi-Boii"
     <LinearLayout
         android:id="@+id/linerbttm"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal">
 
