@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@                        @@
+@@ Author - Crazzi_Boii   @@
+@@                        @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+Follow me on github - "github.com/Crazzi-Boii"
+-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -6,20 +15,22 @@
     android:background="@color/colorPrimary">
 
     <LinearLayout
+        android:id="@+id/linerTop"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:orientation="horizontal"
-        android:id="@+id/linerTop">
+        >
 
         <ImageButton
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
             android:background="@color/colorAccent"
+            android:onClick="decr"
             android:scaleType="centerCrop"
             android:src="@drawable/left"
-            android:onClick="decr"
-            tools:ignore="ContentDescription,Left Button" />
+            tools:ignore="ContentDescription,Left Button"
+            />
 
         <TextView
             android:id="@+id/CoffeeTypeTextView"
@@ -31,7 +42,7 @@
             android:fontFamily="cursive"
             android:text="Coffee ?"
             android:textAlignment="center"
-            android:textColor="@color/White"
+            android:textColor="@color/colorPrimary"
             android:textSize="35sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
@@ -40,22 +51,78 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
-            android:onClick="incr"
             android:background="@color/colorAccent"
+            android:onClick="incr"
             android:scaleType="centerCrop"
             android:src="@drawable/right"
             tools:ignore="ContentDescription,Right Button" />
     </LinearLayout>
-        <!--<TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:layout_margin="20dp"
-            android:id="@+id/testtv"
-            android:text="98"
-            android:textColor="@color/White"
-            android:layout_below="@id/linerTop"/>-->
+
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linerbttm"
+        android:layout_below="@id/linerTop"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.70">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/coffeePicture"
+                android:src="@drawable/icon"
+                android:scaleType="fitXY"/>
+            <TextView
+                android:id="@+id/coffeePriceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignEnd="@id/coffeePicture"
+                android:padding="10dp"
+                android:text="Rs. 300"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:background="@drawable/roundedcorner"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_margin="20dp"
+        android:id="@+id/testtv"
+        android:text="98"
+        android:textColor="@color/White"
+        android:layout_below="@id/linerTop"/>-->
+    <LinearLayout
+        android:id="@+id/linerbttm"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_alignParentBottom="true"
