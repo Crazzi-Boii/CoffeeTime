@@ -12,54 +12,27 @@ Follow me on github - "github.com/Crazzi-Boii"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
-
-    <LinearLayout
-        android:id="@+id/linerTop"
+    <TextView
+        android:id="@+id/actionbar"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal">
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorAccent"
+        android:fontFamily="cursive"
+        android:text="Coffee Time"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="35sp"
+        android:textStyle="bold" />
 
-        <ImageButton
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.25"
-            android:background="@color/colorAccent"
-            android:onClick="decr"
-            android:scaleType="centerCrop"
-            android:src="@drawable/left"
-            tools:ignore="ContentDescription,Left Button" />
 
-        <TextView
-            android:id="@+id/CoffeeTypeTextView"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/colorAccent"
-            android:enabled="false"
-            android:fontFamily="cursive"
-            android:text="Coffee ?"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="35sp"
-            android:textStyle="bold"
-            tools:ignore="HardcodedText" />
 
-        <ImageButton
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.25"
-            android:background="@color/colorAccent"
-            android:onClick="incr"
-            android:scaleType="centerCrop"
-            android:src="@drawable/right"
-            tools:ignore="ContentDescription,Right Button" />
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/linerbttm"
-        android:layout_below="@id/linerTop"
+        android:layout_below="@id/actionbar"
         android:orientation="vertical">
 
 
@@ -73,7 +46,7 @@ Follow me on github - "github.com/Crazzi-Boii"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitXY"
-                android:src="@drawable/icon" />
+                android:src="@drawable/homepic" />
 
             <TextView
                 android:id="@+id/coffeePriceTextView"
@@ -83,35 +56,86 @@ Follow me on github - "github.com/Crazzi-Boii"
                 android:layout_alignParentBottom="true"
                 android:layout_margin="15dp"
                 android:background="@drawable/roundedcorner"
-                android:fontFamily="sans-serif"
+                android:fontFamily="cursive"
+                android:textColor="@color/colorPrimary"
                 android:padding="10dp"
-                android:text="Rs. 300"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 android:visibility="invisible" />
         </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/linerTop"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            >
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:background="@color/colorAccent"
+                android:onClick="decr"
+                android:scaleType="centerCrop"
+                android:src="@drawable/left"
+                tools:ignore="ContentDescription,Left Button" />
+
+            <TextView
+                android:id="@+id/CoffeeTypeTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:enabled="false"
+                android:fontFamily="cursive"
+                android:text="Choose coffee"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:background="@color/colorAccent"
+                android:onClick="incr"
+                android:scaleType="centerCrop"
+                android:src="@drawable/right"
+                tools:ignore="ContentDescription,Right Button" />
+        </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/totalmenu"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:visibility="invisible">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
                 <ImageButton
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="2dp"
                     android:layout_weight="0.25"
                     android:background="@drawable/roundedcorner"
+                    android:onClick="qdecr"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/remove"
-                    android:onClick="qdecr"/>
+                    android:src="@drawable/remove" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -119,17 +143,6 @@ Follow me on github - "github.com/Crazzi-Boii"
                     android:layout_weight="0.5"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:fontFamily="cursive"
-                        android:padding="5dp"
-                        android:text="Quantity"
-                        android:textAlignment="center"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="35sp"
-                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/showQuantity"
@@ -137,10 +150,11 @@ Follow me on github - "github.com/Crazzi-Boii"
                         android:layout_height="0dp"
                         android:layout_weight="0.75"
                         android:fontFamily="cursive"
-                        android:text="1"
+                        android:text="Quantity\nPicker"
+                        android:paddingTop="5dp"
                         android:textAlignment="center"
                         android:textColor="@color/colorAccent"
-                        android:textSize="35sp"
+                        android:textAppearance="?android:textAppearanceLarge"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -148,17 +162,21 @@ Follow me on github - "github.com/Crazzi-Boii"
                 <ImageButton
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="2dp"
                     android:layout_weight="0.25"
                     android:background="@drawable/roundedcorner"
+                    android:onClick="qincr"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/add"
-                    android:onClick="qincr"/>
+                    android:src="@drawable/add" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
@@ -166,36 +184,40 @@ Follow me on github - "github.com/Crazzi-Boii"
                     android:id="@+id/xtraChinaTextView"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="5dp"
+                    android:layout_marginEnd="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/buttonround"
                     android:fontFamily="cursive"
-                    android:text=" extra \n cinnamon"
+                    android:onClick="xtraChina"
+                    android:text=" extra\ncinnamon"
                     android:textAlignment="center"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="30sp"
-                    android:textStyle="bold"
-                    android:onClick="xtraChina"
-                    />
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/xtraChoco"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="5dp"
+                    android:layout_marginStart="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/buttonround"
                     android:fontFamily="cursive"
+                    android:onClick="XtraChoco"
                     android:text="chocolate\n syrup"
                     android:textAlignment="center"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="30sp"
-                    android:textStyle="bold"
-                    android:onClick="XtraChoco"/>
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textStyle="bold" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
@@ -203,63 +225,44 @@ Follow me on github - "github.com/Crazzi-Boii"
                     android:id="@+id/small"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_marginEnd="2dp"
-                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/buttonround"
                     android:fontFamily="cursive"
+                    android:onClick="sizeS"
                     android:scaleType="centerCrop"
-                    android:text="S"
-                    android:textSize="50sp"
-                    android:textStyle="bold"
-                    android:onClick="sizeS"/>
+                    android:text="Regular"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textStyle="bold" />
 
-                <Button
-                    android:id="@+id/medium"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="2dp"
-                    android:layout_marginStart="2dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/buttonround"
-                    android:fontFamily="cursive"
-                    android:scaleType="centerCrop"
-                    android:text="M"
-                    android:textSize="50sp"
-                    android:textStyle="bold"
-                    android:onClick="sizeM"/>
 
                 <Button
                     android:id="@+id/large"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_marginEnd="2dp"
-                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginStart="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/buttonround"
                     android:fontFamily="cursive"
+                    android:onClick="sizeL"
                     android:scaleType="centerCrop"
-                    android:text="L"
-                    android:textSize="50sp"
-                    android:textStyle="bold"
-                    android:onClick="sizeL"/>
-
-                <Button
-                    android:id="@+id/Xlarge"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="2dp"
-                    android:layout_marginStart="2dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/buttonround"
-                    android:fontFamily="cursive"
-                    android:scaleType="centerCrop"
-                    android:text="XL"
-                    android:textSize="50sp"
-                    android:textStyle="bold"
-                    android:onClick="sizeXL"/>
+                    android:text="King"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textStyle="bold" />
 
             </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.50"
+                android:text="@string/info"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:fontFamily="cursive"
+                />
 
 
         </LinearLayout>
@@ -307,6 +310,9 @@ Follow me on github - "github.com/Crazzi-Boii"
             android:textColor="@color/colorPrimary"
             android:textSize="30sp"
             android:textStyle="bold"
+            android:onClick="checkout"
             tools:ignore="ButtonStyle,HardcodedText" />
     </LinearLayout>
+
+
 </RelativeLayout>

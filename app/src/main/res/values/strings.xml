@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">CoffeeTime</string>
     <string name="bg_image">background_image</string>
-
+    <string name="info">You can order maximum 5 cups of coffee.</string>
 </resources>
