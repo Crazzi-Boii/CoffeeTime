@@ -39,6 +39,11 @@ public class HomeActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        //LinearLayout layout1TV = (LinearLayout) findViewById(R.id.layout1);
+        //layout1TV.setVisibility(View.VISIBLE);
+        LinearLayout layout2TV = (LinearLayout) findViewById(R.id.layout2);
+        layout2TV.setVisibility(View.VISIBLE);
+
 
 
     }
@@ -119,6 +124,8 @@ public class HomeActivity extends AppCompatActivity{
     void displayCoffeePrice(int CI){
         TextView coffeePriceTV = (TextView) findViewById(R.id.coffeePriceTextView);
         coffeePriceTV.setVisibility(View.VISIBLE);
+        LinearLayout linerbttmTV = (LinearLayout) findViewById(R.id.linerbttm);
+        linerbttmTV.setVisibility(View.VISIBLE);
         String total = NumberFormat.getCurrencyInstance(new Locale("en", "in")).format(basePrice[CI]);
         coffeePriceTV.setText(total);
     }
@@ -214,10 +221,16 @@ public class HomeActivity extends AppCompatActivity{
             return 0;
     }
 
+    void addToCart(){
+
+
+
+
+
+    }
 
     public void checkout(View view){
         priceAlgo();
-
 
     }
 

@@ -27,13 +27,15 @@ Follow me on github - "github.com/Crazzi-Boii"
 
 
 
-
+    <!-- LAYOUT 1 -->
     <LinearLayout
+        android:id="@+id/layout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/linerbttm"
         android:layout_below="@id/actionbar"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="invisible">
 
 
         <RelativeLayout
@@ -268,6 +270,109 @@ Follow me on github - "github.com/Crazzi-Boii"
         </LinearLayout>
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/actionbar"
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:paddingBottom="2dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pic0"
+                        android:scaleType="fitXY"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_height="200dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pic1"
+                        android:scaleType="fitXY"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pic2"
+                        android:scaleType="fitXY"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pic3"
+                        android:scaleType="fitXY"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:paddingTop="2dp"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pic5"
+                        android:scaleType="fitXY"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/buttonround"
+                android:fontFamily="cursive"
+                android:text="Confirm Order"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                tools:ignore="ButtonStyle,HardcodedText" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
     <!--<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -282,7 +387,8 @@ Follow me on github - "github.com/Crazzi-Boii"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="invisible">
 
         <Button
             android:layout_width="0dp"
