@@ -220,17 +220,16 @@ public class HomeActivity extends AppCompatActivity{
         else
             return 0;
     }
-
     void addToCart(){
 
-
-
-
+    }
+    void removeFromCart(){
 
     }
-
     public void checkout(View view){
         priceAlgo();
+    }
+    void resetAll(){
 
     }
 

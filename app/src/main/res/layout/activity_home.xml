@@ -12,6 +12,7 @@ Follow me on github - "github.com/Crazzi-Boii"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
+
     <TextView
         android:id="@+id/actionbar"
         android:layout_width="match_parent"
@@ -24,7 +25,6 @@ Follow me on github - "github.com/Crazzi-Boii"
         android:textColor="@color/colorPrimary"
         android:textSize="35sp"
         android:textStyle="bold" />
-
 
 
     <!-- LAYOUT 1 -->
@@ -59,18 +59,18 @@ Follow me on github - "github.com/Crazzi-Boii"
                 android:layout_margin="15dp"
                 android:background="@drawable/roundedcorner"
                 android:fontFamily="cursive"
-                android:textColor="@color/colorPrimary"
                 android:padding="10dp"
+                android:textColor="@color/colorPrimary"
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:visibility="invisible" />
         </RelativeLayout>
+
         <LinearLayout
             android:id="@+id/linerTop"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
 
             <ImageButton
                 android:layout_width="0dp"
@@ -112,11 +112,11 @@ Follow me on github - "github.com/Crazzi-Boii"
             android:id="@+id/totalmenu"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
             android:layout_marginBottom="5dp"
             android:layout_marginEnd="5dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
+            android:layout_weight="1"
             android:orientation="vertical"
             android:visibility="invisible">
 
@@ -152,11 +152,11 @@ Follow me on github - "github.com/Crazzi-Boii"
                         android:layout_height="0dp"
                         android:layout_weight="0.75"
                         android:fontFamily="cursive"
-                        android:text="Quantity\nPicker"
                         android:paddingTop="5dp"
+                        android:text="Quantity\nPicker"
                         android:textAlignment="center"
-                        android:textColor="@color/colorAccent"
                         android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="@color/colorAccent"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -193,8 +193,8 @@ Follow me on github - "github.com/Crazzi-Boii"
                     android:onClick="xtraChina"
                     android:text=" extra\ncinnamon"
                     android:textAlignment="center"
-                    android:textColor="@color/colorPrimary"
                     android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/colorPrimary"
                     android:textStyle="bold" />
 
                 <TextView
@@ -208,8 +208,8 @@ Follow me on github - "github.com/Crazzi-Boii"
                     android:onClick="XtraChoco"
                     android:text="chocolate\n syrup"
                     android:textAlignment="center"
-                    android:textColor="@color/colorPrimary"
                     android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/colorPrimary"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -254,110 +254,201 @@ Follow me on github - "github.com/Crazzi-Boii"
                     android:textStyle="bold" />
 
             </LinearLayout>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.50"
+                android:fontFamily="cursive"
                 android:text="@string/info"
                 android:textAlignment="center"
-                android:textColor="@color/colorAccent"
-                android:textStyle="bold"
                 android:textAppearance="?android:textAppearanceLarge"
-                android:fontFamily="cursive"
-                />
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold" />
 
 
         </LinearLayout>
     </LinearLayout>
-
+    <!--- LAYOUT 2 -->
     <LinearLayout
         android:id="@+id/layout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/actionbar"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="visible">
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
+                android:orientation="vertical">
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:paddingBottom="2dp">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/pic0"
-                        android:scaleType="fitXY"/>
-
-                </RelativeLayout>
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:paddingTop="2dp"
                     android:paddingBottom="2dp"
-                    android:layout_height="200dp">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/pic1"
-                        android:scaleType="fitXY"/>
-
-                </RelativeLayout>
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/pic2"
-                        android:scaleType="fitXY"/>
-
-                </RelativeLayout>
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/pic3"
-                        android:scaleType="fitXY"/>
-
-                </RelativeLayout>
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:paddingTop="2dp"
                     >
+
+                    <ImageView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/pic0"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/White"
+                        android:backgroundTintMode="screen"/>
+
+                    <TextView
+                        android:id="@+id/OrderDetail1.1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="cursive"
+                        android:text="Capucino"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/OrderDetail1.2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/OrderDetail1.1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="cursive"
+                        android:text=" - King"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="35sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/OrderDetail1.3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/OrderDetail1.2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="cursive"
+                        android:text="with extra chinnamon and\ncoffee syryo"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="35sp"
+                        android:textStyle="bold"/>
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/cancel"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="10dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp">
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/pic5"
-                        android:scaleType="fitXY"/>
+                        android:scaleType="fitXY"
+                        android:src="@drawable/pic1" />
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/cancel"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="10dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/pic2" />
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/cancel"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="10dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/pic3" />
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/cancel"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="10dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:paddingTop="2dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/pic5" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/cancel"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="10dp"/>
 
                 </RelativeLayout>
             </LinearLayout>
         </ScrollView>
 
     </LinearLayout>
+
     <LinearLayout
+        android:id="@+id/linerbttm2"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:visibility="visible">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <Button
-                android:layout_width="300dp"
+                android:layout_width="250dp"
                 android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
                 android:background="@drawable/buttonround"
                 android:fontFamily="cursive"
                 android:text="Confirm Order"
@@ -366,22 +457,10 @@ Follow me on github - "github.com/Crazzi-Boii"
                 android:textColor="@color/colorPrimary"
                 android:textSize="30sp"
                 android:textStyle="bold"
-                android:layout_centerHorizontal="true"
                 tools:ignore="ButtonStyle,HardcodedText" />
         </RelativeLayout>
     </LinearLayout>
 
-
-
-    <!--<TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:layout_margin="20dp"
-        android:id="@+id/testtv"
-        android:text="98"
-        android:textColor="@color/White"
-        android:layout_below="@id/linerTop"/>-->
     <LinearLayout
         android:id="@+id/linerbttm"
         android:layout_width="match_parent"
@@ -411,13 +490,13 @@ Follow me on github - "github.com/Crazzi-Boii"
             android:layout_weight="1"
             android:background="@color/colorAccent"
             android:fontFamily="cursive"
+            android:onClick="checkout"
             android:text="Next"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimary"
             android:textSize="30sp"
             android:textStyle="bold"
-            android:onClick="checkout"
             tools:ignore="ButtonStyle,HardcodedText" />
     </LinearLayout>
 
