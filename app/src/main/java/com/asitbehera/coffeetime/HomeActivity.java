@@ -22,7 +22,7 @@ import android.widget.Toast;
 import java.text.NumberFormat;
 import java.util.Locale;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity{
     int coffeeIndex = -1, clickStatus, quantity = 0; //to know which coffee type is selected
     Toast toast;
     String coffeeTypes[] = new String[]{"Cappuccino","Americano","Espresso","Macchiato","Mocha","Latte"};
@@ -32,6 +32,8 @@ public class HomeActivity extends AppCompatActivity {
     int addOn[] = new int[]{ 23 , 12};
     int[][] cart;
     int totalPrice;
+
+    int test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -211,10 +213,12 @@ public class HomeActivity extends AppCompatActivity {
         else
             return 0;
     }
-    
+
 
     public void checkout(View view){
         priceAlgo();
+
+
     }
 
 
