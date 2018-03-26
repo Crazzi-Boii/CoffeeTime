@@ -211,6 +211,8 @@ public class HomeActivity extends AppCompatActivity {
         else
             return 0;
     }
+    
+
     public void checkout(View view){
         priceAlgo();
     }
