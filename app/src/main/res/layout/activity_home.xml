@@ -290,21 +290,14 @@ Follow me on github - "github.com/Crazzi-Boii"
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:paddingBottom="2dp"
-                    >
+                    android:paddingBottom="2dp">
 
-                    <ImageView
-
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/pic0"
-                        />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/White"
-                        android:backgroundTintMode="screen"/>
+                        android:layout_margin="5dp"
+                        android:background="@drawable/roundededge"
+                        android:padding="10dp" />
 
                     <TextView
                         android:id="@+id/OrderDetail1.1"
@@ -317,118 +310,328 @@ Follow me on github - "github.com/Crazzi-Boii"
                         android:textColor="@color/colorAccent"
                         android:textSize="40sp"
                         android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/OrderDetail1.2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_toRightOf="@id/OrderDetail1.1"
-                        android:layout_marginTop="10dp"
                         android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/OrderDetail1.1"
                         android:fontFamily="cursive"
                         android:text=" - King"
                         android:textColor="@color/colorAccent"
                         android:textSize="35sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/OrderDetail1.3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/OrderDetail1.2"
-                        android:layout_marginTop="10dp"
                         android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
                         android:fontFamily="cursive"
-                        android:text="with extra chinnamon and\ncoffee syryo"
+                        android:text="with extra chinnamon and\ncoffee syryp"
                         android:textColor="@color/colorAccent"
                         android:textSize="35sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
+
                     <ImageView
+                        android:onClick="canOrd1"
+                        android:id="@+id/cancelOrder1"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/cancel"
                         android:layout_alignParentRight="true"
-                        android:layout_margin="10dp"/>
+                        android:layout_margin="13dp"
+                        android:src="@drawable/cancel" />
 
                 </RelativeLayout>
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:paddingBottom="2dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/roundededge"
+                        android:padding="10dp" />
+
+                    <TextView
+                        android:id="@+id/OrderDetail2.1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="cursive"
+                        android:text="Capucino"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/OrderDetail2.2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/OrderDetail2.1"
+                        android:fontFamily="cursive"
+                        android:text=" - King"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/OrderDetail2.3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/OrderDetail2.2"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="cursive"
+                        android:text="with extra chinnamon and\ncoffee syryp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:onClick="canOrd2"
+                        android:id="@+id/cancelOrder2"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="13dp"
+                        android:src="@drawable/cancel" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:paddingBottom="2dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/roundededge"
+                        android:padding="10dp" />
+
+                    <TextView
+                        android:id="@+id/OrderDetail3.1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="cursive"
+                        android:text="Capucino"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/OrderDetail3.2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/OrderDetail3.1"
+                        android:fontFamily="cursive"
+                        android:text=" - King"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/OrderDetail3.3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/OrderDetail3.2"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="cursive"
+                        android:text="with extra chinnamon and\ncoffee syryp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:onClick="canOrd3"
+                        android:id="@+id/cancelOrder3"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="13dp"
+                        android:src="@drawable/cancel" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:paddingBottom="2dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/roundededge"
+                        android:padding="10dp" />
+
+                    <TextView
+                        android:id="@+id/OrderDetail4.1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="cursive"
+                        android:text="Capucino"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/OrderDetail4.2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/OrderDetail4.1"
+                        android:fontFamily="cursive"
+                        android:text=" - King"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/OrderDetail4.3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/OrderDetail4.2"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="cursive"
+                        android:text="with extra chinnamon and\ncoffee syryp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:onClick="canOrd4"
+                        android:id="@+id/cancelOrder4"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="13dp"
+                        android:src="@drawable/cancel" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:paddingBottom="2dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/roundededge"
+                        android:padding="10dp" />
+
+                    <TextView
+                        android:id="@+id/OrderDetail5.1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="cursive"
+                        android:text="Capucino"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/OrderDetail5.2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/OrderDetail5.1"
+                        android:fontFamily="cursive"
+                        android:text=" - King"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/OrderDetail5.3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/OrderDetail5.2"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="cursive"
+                        android:text="with extra chinnamon and\ncoffee syryp"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:onClick="canOrd5"
+                        android:id="@+id/cancelOrder5"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="13dp"
+                        android:src="@drawable/cancel" />
+
+                </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:paddingBottom="2dp"
-                    android:paddingTop="2dp">
+                    >
 
-                    <ImageView
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/pic1" />
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:src="@drawable/cancel"
-                        android:layout_alignParentRight="true"
-                        android:layout_margin="10dp"/>
+                        android:background="@drawable/roundededge"
+                        android:layout_margin="5dp"
+                        android:padding="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tp1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="cursive"
+                        android:text="Total - "
+                        android:textColor="@color/colorAccent"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/totalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="cursive"
+                        android:text=""
+                        android:layout_centerHorizontal="true"
+                        android:layout_toRightOf="@+id/tp1"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
 
                 </RelativeLayout>
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:paddingBottom="2dp"
-                    android:paddingTop="2dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/pic2" />
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:src="@drawable/cancel"
-                        android:layout_alignParentRight="true"
-                        android:layout_margin="10dp"/>
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:paddingBottom="2dp"
-                    android:paddingTop="2dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/pic3" />
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:src="@drawable/cancel"
-                        android:layout_alignParentRight="true"
-                        android:layout_margin="10dp"/>
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:paddingTop="2dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/pic5" />
-
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:src="@drawable/cancel"
-                        android:layout_alignParentRight="true"
-                        android:layout_margin="10dp"/>
-
-                </RelativeLayout>
             </LinearLayout>
         </ScrollView>
 
@@ -457,7 +660,8 @@ Follow me on github - "github.com/Crazzi-Boii"
                 android:textColor="@color/colorPrimary"
                 android:textSize="30sp"
                 android:textStyle="bold"
-                tools:ignore="ButtonStyle,HardcodedText" />
+                tools:ignore="ButtonStyle,HardcodedText"
+                />
         </RelativeLayout>
     </LinearLayout>
 
@@ -480,7 +684,7 @@ Follow me on github - "github.com/Crazzi-Boii"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimary"
             android:textSize="30sp"
-
+            android:onClick="addCoffee"
             android:textStyle="bold"
             tools:ignore="ButtonStyle,HardcodedText" />
 
@@ -497,7 +701,8 @@ Follow me on github - "github.com/Crazzi-Boii"
             android:textColor="@color/colorPrimary"
             android:textSize="30sp"
             android:textStyle="bold"
-            tools:ignore="ButtonStyle,HardcodedText" />
+            tools:ignore="ButtonStyle,HardcodedText"
+            />
     </LinearLayout>
 
 

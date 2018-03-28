@@ -9,6 +9,7 @@ package com.asitbehera.coffeetime;
 *
 * Follow me on github - "github.com/Crazzi-Boii"
 */
+
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -30,34 +31,38 @@ public class HomeActivity extends AppCompatActivity{
     int basePrice[] = new int[]{ 120 , 110 , 90 , 110 , 125 , 130 };
     int coffeeSize[] = new int[]{ 14 , 21};
     int addOn[] = new int[]{ 23 , 12};
-    int[][] cart;
+    int[][] cart = new int[10][6];
     int totalPrice;
-
-    int test;
+    static int cupCounter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        //LinearLayout layout1TV = (LinearLayout) findViewById(R.id.layout1);
-        //layout1TV.setVisibility(View.VISIBLE);
+        LinearLayout layout1TV = (LinearLayout) findViewById(R.id.layout1);
+        layout1TV.setVisibility(View.VISIBLE);
         LinearLayout layout2TV = (LinearLayout) findViewById(R.id.layout2);
-        layout2TV.setVisibility(View.VISIBLE);
-
-
-
+        layout2TV.setVisibility(View.INVISIBLE);
+        LinearLayout linerButton2 = (LinearLayout) findViewById(R.id.linerbttm2);
+        linerButton2.setVisibility(View.INVISIBLE);
     }
     public void  incr(View view){
         LinearLayout totalMenu = (LinearLayout) findViewById(R.id.totalmenu);
         totalMenu.setVisibility(View.VISIBLE);
+        if (quantity != 0)
+            addToCart();
         clickStatus = 1;
         io(clickStatus);
+
     }
     public void  decr(View view){
         LinearLayout totalMenu = (LinearLayout) findViewById(R.id.totalmenu);
         totalMenu.setVisibility(View.VISIBLE);
+        if (quantity != 0)
+            addToCart();
         clickStatus = 0;
         io(clickStatus);
+
     }
 
 
@@ -111,9 +116,6 @@ public class HomeActivity extends AppCompatActivity{
         TextView coffeeTypeTV = (TextView) findViewById(R.id.CoffeeTypeTextView);
         if (CI >= 0 && CI <= 5)
         coffeeTypeTV.setText(coffeeTypes[CI]);
-
-       /* TextView testTV = (TextView) findViewById(R.id.testtv);
-        testTV.setText(String.valueOf(CI)); */
     }
     void displayCoffeePic(int CI){
         ImageView coffeePictureIV = (ImageView) findViewById(R.id.coffeePicture);
@@ -129,6 +131,10 @@ public class HomeActivity extends AppCompatActivity{
         String total = NumberFormat.getCurrencyInstance(new Locale("en", "in")).format(basePrice[CI]);
         coffeePriceTV.setText(total);
     }
+
+    /***
+     *  Extra addons
+     */
     int XtrachinaStatus = 0;
     public void xtraChina(View view) {
         TextView xtraChinaTV = (TextView) findViewById(R.id.xtraChinaTextView);
@@ -155,6 +161,23 @@ public class HomeActivity extends AppCompatActivity{
             XtrachocoStatus=0;
         }
     }
+    int getAddOnPrice(){
+        if (XtrachinaStatus == 1 && XtrachocoStatus == 1)
+            return (addOn[0] + addOn[1]);
+        else if (XtrachinaStatus == 1)
+            return addOn[0];
+        else if (XtrachocoStatus == 1)
+            return addOn[1];
+        else
+            return 0;
+    }
+    /***
+     *  Extra addons ends
+     */
+
+
+
+
     /***************************************************
      * *************************************************
      *
@@ -190,11 +213,8 @@ public class HomeActivity extends AppCompatActivity{
     }
     void sizeReset(){
         TextView smallTV = (TextView) findViewById(R.id.small);
-
         TextView largeTV = (TextView) findViewById(R.id.large);
-
         smallTV.setTextColor(Color.parseColor("#211f21"));
-
         largeTV.setTextColor(Color.parseColor("#211f21"));
 
     }
@@ -207,34 +227,109 @@ public class HomeActivity extends AppCompatActivity{
      * ****************************************************/
 
     void priceAlgo(){
-        totalPrice = ( basePrice[coffeeIndex] + coffeeSize[coffeeSizeIndex] + getAddOnPrice()) * quantity ;
-        makeToast(NumberFormat.getCurrencyInstance(new Locale("en", "in")).format(totalPrice));
-    }
-    int getAddOnPrice(){
-        if (XtrachinaStatus == 1 && XtrachocoStatus == 1)
-            return (addOn[0] + addOn[1]);
-        else if (XtrachinaStatus == 1)
-            return addOn[0];
-        else if (XtrachocoStatus == 1)
-            return addOn[1];
-        else
-            return 0;
-    }
-    void addToCart(){
+            try {
+                    cart[cupCounter][0] = coffeeIndex;
+                    cart[cupCounter][1] = coffeeSizeIndex;
+                    cart[cupCounter][2] = XtrachinaStatus;
+                    cart[cupCounter][3] = XtrachocoStatus;
+                    cart[cupCounter][4] = quantity;
+                    cart[cupCounter][5] = ( basePrice[coffeeIndex] + coffeeSize[coffeeSizeIndex] + getAddOnPrice());
+                    cupCounter++;
+                    makeToast("hello");
+            }catch (Exception e){
+                makeToast("" + e);
+            }
 
+    }
+
+    void addToCart(){
+        if (cupCounter <= 5)
+        if (quantity != 0) {
+            //makeToast("added");
+            priceAlgo();
+            makeToast("cupCounter - " + cupCounter);
+            makeToast(coffeeTypes[cart[(cupCounter - 1)][0]] + " added");
+
+        }else{
+            LinearLayout layout1TV = (LinearLayout) findViewById(R.id.layout1);
+            layout1TV.setVisibility(View.INVISIBLE);
+            LinearLayout linerButton = (LinearLayout) findViewById(R.id.linerbttm);
+            linerButton.setVisibility(View.INVISIBLE);
+            LinearLayout linerButton2 = (LinearLayout) findViewById(R.id.linerbttm2);
+            linerButton2.setVisibility(View.VISIBLE);
+            LinearLayout layout2TV = (LinearLayout) findViewById(R.id.layout2);
+            layout2TV.setVisibility(View.VISIBLE);
+        }
+        resetAll();
     }
     void removeFromCart(){
 
     }
     public void checkout(View view){
-        priceAlgo();
+        if (quantity != 0 || cupCounter != 0){
+            addToCart();
+            LinearLayout layout1TV = (LinearLayout) findViewById(R.id.layout1);
+            layout1TV.setVisibility(View.INVISIBLE);
+            LinearLayout linerButton = (LinearLayout) findViewById(R.id.linerbttm);
+            linerButton.setVisibility(View.INVISIBLE);
+            LinearLayout linerButton2 = (LinearLayout) findViewById(R.id.linerbttm2);
+            linerButton2.setVisibility(View.VISIBLE);
+            LinearLayout layout2TV = (LinearLayout) findViewById(R.id.layout2);
+            layout2TV.setVisibility(View.VISIBLE);
+        }
     }
     void resetAll(){
-
+        quantity = 0;
+        XtrachinaStatus = 0;
+        XtrachocoStatus = 0;
+        totalPrice = 0;
+        displayAll();
+    }
+    void displayAll(){
+        displayQuantity();
+        TextView smallTV = (TextView) findViewById(R.id.small);
+        smallTV.setTextColor(Color.parseColor("#211f21"));
+    }
+    /***
+     *   ADD COFFEE
+     */
+    public void addCoffee(View view){
+        addToCart();
+    }
+    /***
+     *   ADD COFFEE END
+     */
+    /***
+     * CANCEL ORDER methods
+     **/
+    int cancelOrderIndex;
+    public void canOrd1(View view){
+        cancelOrderIndex = 0;
+        removeFromCart();
+    }
+    public void canOrd2(View view) {
+        cancelOrderIndex = 1;
+        removeFromCart();
+    }
+    public  void canOrd3(View view){
+        cancelOrderIndex = 2;
+        removeFromCart();
+    }
+    public void canOrd4(View view){
+        cancelOrderIndex = 3;
+        removeFromCart();
+    }
+    public void canOrd5(View view){
+        cancelOrderIndex = 4;
+        removeFromCart();
     }
 
 
 
+    /***
+     *
+     * CANCEL ORDER methods end here
+     */
 
 
     public void makeToast(CharSequence text){
