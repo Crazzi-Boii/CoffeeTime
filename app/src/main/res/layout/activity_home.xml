@@ -24,7 +24,8 @@ Follow me on github - "github.com/Crazzi-Boii"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
         android:textSize="35sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
 
 
     <!-- LAYOUT 1 -->
@@ -48,7 +49,8 @@ Follow me on github - "github.com/Crazzi-Boii"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitXY"
-                android:src="@drawable/homepic" />
+                android:src="@drawable/homepic"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/coffeePriceTextView"
@@ -128,7 +130,8 @@ Follow me on github - "github.com/Crazzi-Boii"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_weight="1"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                tools:ignore="NestedWeights">
 
                 <ImageButton
                     android:layout_width="0dp"
@@ -137,7 +140,8 @@ Follow me on github - "github.com/Crazzi-Boii"
                     android:background="@drawable/roundedcorner"
                     android:onClick="qdecr"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/remove" />
+                    android:src="@drawable/remove"
+                    tools:ignore="ContentDescription" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -157,7 +161,8 @@ Follow me on github - "github.com/Crazzi-Boii"
                         android:textAlignment="center"
                         android:textAppearance="?android:textAppearanceLarge"
                         android:textColor="@color/colorAccent"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
 
                 </LinearLayout>
 
@@ -168,7 +173,8 @@ Follow me on github - "github.com/Crazzi-Boii"
                     android:background="@drawable/roundedcorner"
                     android:onClick="qincr"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/add" />
+                    android:src="@drawable/add"
+                    tools:ignore="ContentDescription" />
 
             </LinearLayout>
 
@@ -195,7 +201,8 @@ Follow me on github - "github.com/Crazzi-Boii"
                     android:textAlignment="center"
                     android:textAppearance="?android:textAppearanceLarge"
                     android:textColor="@color/colorPrimary"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:id="@+id/xtraChoco"
@@ -210,7 +217,8 @@ Follow me on github - "github.com/Crazzi-Boii"
                     android:textAlignment="center"
                     android:textAppearance="?android:textAppearanceLarge"
                     android:textColor="@color/colorPrimary"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
             </LinearLayout>
 
             <LinearLayout
@@ -235,7 +243,8 @@ Follow me on github - "github.com/Crazzi-Boii"
                     android:scaleType="centerCrop"
                     android:text="Regular"
                     android:textAppearance="?android:textAppearanceLarge"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="ButtonStyle,HardcodedText" />
 
 
                 <Button
@@ -251,7 +260,8 @@ Follow me on github - "github.com/Crazzi-Boii"
                     android:scaleType="centerCrop"
                     android:text="King"
                     android:textAppearance="?android:textAppearanceLarge"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="ButtonStyle,HardcodedText" />
 
             </LinearLayout>
 
@@ -280,7 +290,8 @@ Follow me on github - "github.com/Crazzi-Boii"
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -324,7 +335,8 @@ Follow me on github - "github.com/Crazzi-Boii"
                         android:text=""
                         android:textColor="@color/colorAccent"
                         android:textSize="35sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        tools:ignore="RelativeOverlap,RtlHardcoded" />
 
                     <TextView
                         android:id="@+id/OrderDetail1.3"
@@ -373,7 +385,8 @@ Follow me on github - "github.com/Crazzi-Boii"
                         android:layout_alignParentRight="true"
                         android:layout_margin="13dp"
                         android:onClick="canOrd1"
-                        android:src="@drawable/cancel" />
+                        android:src="@drawable/cancel"
+                        tools:ignore="ContentDescription,RtlHardcoded" />
 
                 </RelativeLayout>
 
@@ -414,7 +427,8 @@ Follow me on github - "github.com/Crazzi-Boii"
 
                         android:textColor="@color/colorAccent"
                         android:textSize="35sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        tools:ignore="RelativeOverlap,RtlHardcoded" />
 
                     <TextView
                         android:id="@+id/OrderDetail2.3"
@@ -462,7 +476,8 @@ Follow me on github - "github.com/Crazzi-Boii"
                         android:layout_alignParentRight="true"
                         android:layout_margin="13dp"
                         android:onClick="canOrd2"
-                        android:src="@drawable/cancel" />
+                        android:src="@drawable/cancel"
+                        tools:ignore="ContentDescription,RtlHardcoded" />
 
                 </RelativeLayout>
 
@@ -503,7 +518,8 @@ Follow me on github - "github.com/Crazzi-Boii"
 
                         android:textColor="@color/colorAccent"
                         android:textSize="35sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        tools:ignore="RelativeOverlap,RtlHardcoded" />
 
                     <TextView
                         android:id="@+id/OrderDetail3.3"
@@ -551,7 +567,8 @@ Follow me on github - "github.com/Crazzi-Boii"
                         android:layout_alignParentRight="true"
                         android:layout_margin="13dp"
                         android:onClick="canOrd3"
-                        android:src="@drawable/cancel" />
+                        android:src="@drawable/cancel"
+                        tools:ignore="ContentDescription,RtlHardcoded" />
 
                 </RelativeLayout>
 
@@ -592,7 +609,8 @@ Follow me on github - "github.com/Crazzi-Boii"
 
                         android:textColor="@color/colorAccent"
                         android:textSize="35sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        tools:ignore="RelativeOverlap,RtlHardcoded" />
 
                     <TextView
                         android:id="@+id/OrderDetail4.3"
@@ -640,7 +658,8 @@ Follow me on github - "github.com/Crazzi-Boii"
                         android:layout_alignParentRight="true"
                         android:layout_margin="13dp"
                         android:onClick="canOrd4"
-                        android:src="@drawable/cancel" />
+                        android:src="@drawable/cancel"
+                        tools:ignore="ContentDescription,RtlHardcoded" />
 
                 </RelativeLayout>
 
@@ -681,7 +700,8 @@ Follow me on github - "github.com/Crazzi-Boii"
 
                         android:textColor="@color/colorAccent"
                         android:textSize="35sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        tools:ignore="RelativeOverlap,RtlHardcoded" />
 
                     <TextView
                         android:id="@+id/OrderDetail5.3"
@@ -729,7 +749,8 @@ Follow me on github - "github.com/Crazzi-Boii"
                         android:layout_alignParentRight="true"
                         android:layout_margin="13dp"
                         android:onClick="canOrd5"
-                        android:src="@drawable/cancel" />
+                        android:src="@drawable/cancel"
+                        tools:ignore="ContentDescription,RtlHardcoded" />
 
                 </RelativeLayout>
 
@@ -756,7 +777,8 @@ Follow me on github - "github.com/Crazzi-Boii"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scaleType="fitStart"
-                android:src="@drawable/thankyou" />
+                android:src="@drawable/thankyou"
+                tools:ignore="ContentDescription" />
         </RelativeLayout>
 
         <TextView
@@ -768,7 +790,8 @@ Follow me on github - "github.com/Crazzi-Boii"
             android:textAlignment="center"
             android:textColor="@color/colorAccent"
             android:textSize="35sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:layout_width="match_parent"
@@ -779,7 +802,8 @@ Follow me on github - "github.com/Crazzi-Boii"
             android:textAlignment="center"
             android:textColor="@color/colorAccent"
             android:textSize="35sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:layout_width="match_parent"
@@ -790,7 +814,8 @@ Follow me on github - "github.com/Crazzi-Boii"
             android:textAlignment="center"
             android:textColor="@color/colorAccent"
             android:textSize="35sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/tp"
@@ -813,7 +838,8 @@ Follow me on github - "github.com/Crazzi-Boii"
             android:textAlignment="center"
             android:textColor="@color/colorAccent"
             android:textSize="35sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
 
 
     </LinearLayout>
@@ -827,7 +853,8 @@ Follow me on github - "github.com/Crazzi-Boii"
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
 
             <Button
                 android:layout_width="250dp"
@@ -882,7 +909,7 @@ Follow me on github - "github.com/Crazzi-Boii"
             android:textColor="@color/colorPrimary"
             android:textSize="30sp"
             android:textStyle="bold"
-            tools:ignore="ButtonStyle,HardcodedText" />
+            tools:ignore="ButtonStyle,HardcodedText,TooManyViews" />
     </LinearLayout>
 
 
